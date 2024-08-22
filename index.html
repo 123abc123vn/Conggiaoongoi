@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lan Tỏa Ơn Gọi Linh Mục</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        section {
+            margin: 20px;
+        }
+        .scripture {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .chat {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .chat input, .chat textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .chat button {
+            padding: 10px 20px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #4a90e2;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Lan Tỏa Ơn Gọi Linh Mục</h1>
+</header>
+
+<section class="scripture">
+    <h2>Lời Chúa Mỗi Ngày</h2>
+    <p>"Anh em hãy đi khắp tứ phương thiên hạ, loan báo Tin Mừng cho mọi loài thọ tạo." (Mc 16, 15)</p>
+</section>
+
+<section class="chat">
+    <h2>Trò Chuyện Cùng Nhau</h2>
+    <textarea id="chatInput" rows="4" placeholder="Chia sẻ suy nghĩ của bạn..."></textarea>
+    <button onclick="sendMessage()">Gửi</button>
+
+    <div id="chatBox" style="text-align: left; margin-top: 20px;">
+        <!-- Messages will appear here -->
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Lan Tỏa Ơn Gọi Linh Mục. Tất cả các quyền được bảo lưu.</p>
+</footer>
+
+<script>
+    function sendMessage() {
+        var chatInput = document.getElementById('chatInput');
+        var chatBox = document.getElementById('chatBox');
+        
+        if (chatInput.value.trim() !== "") {
+            var message = document.createElement('p');
+            message.textContent = chatInput.value;
+            chatBox.appendChild(message);
+            chatInput.value = "";
+        }
+    }
+</script>
+
+</body>
+</html>

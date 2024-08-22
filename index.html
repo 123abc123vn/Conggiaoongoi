@@ -128,4 +128,109 @@
     });
 </script>
 </body>
+    iết lập dự án
+Tổng quan
+Nhắn tin đám mây
+Tích hợp
+Tài khoản dịch vụ
+Quyền riêng tư dữ liệu
+Người dùng và quyền
+Dự án của bạn
+Tên dự án
+Công giáo
+Mã dự án
+conggiaoongoi
+Số dự án
+654991874751
+Khóa API Web
+Không có Khóa API Web cho dự án này
+Môi trường
+Thiết lập này tùy chỉnh dự án của bạn cho các giai đoạn khác nhau của vòng đời ứng dụng
+Loại môi trường
+Không xác định
+Ứng dụng của bạn
+Biệt danh ứng dụng
+https://123abc123vn.github.io/Conggiaoongoi/
+ID ứng dụng
+1:654991874751:web:eb74479d59f826878b040a
+Trang web lưu trữ Firebase được liên kết
+conggiaoongoi
+
+Thiết lập và cấu hình SDK
+
+npm
+
+Mạng lưới phân phối nội địa
+
+Cấu hình
+Nếu bạn đang sử dụng npm và một trình đóng gói mô-đun như webpack hoặc Rollup , bạn có thể chạy lệnh sau để cài đặt SDK mới nhất ( Tìm hiểu thêm ):
+
+npm cài đặt firebase
+Sau đó, khởi tạo Firebase và bắt đầu sử dụng SDK cho các sản phẩm bạn muốn sử dụng.
+
+// Nhập các chức năng bạn cần từ SDK bạn cần
+import { initializeApp } từ "firebase/app" ;   
+nhập { getAnalytics } từ "firebase/analytics" ;   
+// TODO: Thêm SDK cho các sản phẩm Firebase mà bạn muốn sử dụng
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Cấu hình Firebase của ứng dụng web của bạn
+// Đối với Firebase JS SDK v7.20.0 trở lên, measurementId là tùy chọn
+const firebaseConfig = { 
+  apiKey : "AIzaSyBr4kOZzj1gEcE_FfCL29I0crfhNiV6wh0" , 
+  authDomain : "conggiaoongoi.firebaseapp.com" , 
+  databaseURL : "https://conggiaoongoi-default-rtdb.firebaseio.com" , 
+  projectId : "conggiaoongoi" , 
+  storageBucket : "conggiaoongoi.appspot.com" , 
+  tin nhắnSenderId : "654991874751" , 
+  ứng dụngId : "1:654991874751:web:eb74479d59f826878b040a" , 
+  measurementId : "G-G43VL2PDC9" 
+};
+
+// Khởi tạo Firebase
+const ứng dụng = khởi tạo ứng dụng ( firebaseConfig );
+const analytics = getAnalytics ( ứng dụng );
+Lưu ý: Tùy chọn này sử dụng SDK JavaScript dạng mô-đun , giúp giảm kích thước SDK.
+
+Tìm hiểu thêm về Firebase cho web: Bắt đầu , Tài liệu tham khảo API SDK web , Mẫu
+
+Tích hợp các mô hình Gemini vào ứng dụng của bạn
+Thêm ứng dụng web
+Hoàn thành
+2
+3
+4
+Thêm Firebase SDK
+
+Sử dụng npm
+
+Sử dụng thẻ <script>
+Nếu bạn không sử dụng công cụ xây dựng, hãy sử dụng tùy chọn này để thêm và sử dụng Firebase JS SDK. Sử dụng tùy chọn này để bắt đầu, nhưng không khuyến khích sử dụng cho các ứng dụng sản xuất. Tìm hiểu thêm .
+
+Sao chép và dán các tập lệnh này vào cuối <body>thẻ của bạn, nhưng trước khi bạn sử dụng bất kỳ dịch vụ Firebase nào:
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBr4kOZzj1gEcE_FfCL29I0crfhNiV6wh0",
+    authDomain: "conggiaoongoi.firebaseapp.com",
+    databaseURL: "https://conggiaoongoi-default-rtdb.firebaseio.com",
+    projectId: "conggiaoongoi",
+    storageBucket: "conggiaoongoi.appspot.com",
+    messagingSenderId: "654991874751",
+    appId: "1:654991874751:web:eb74479d59f826878b040a",
+    measurementId: "G-G43VL2PDC9"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </html>
